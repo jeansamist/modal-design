@@ -1,0 +1,127 @@
+:root {
+  --primary: #6c63ff;
+  --primary-shadow: #514bc5;
+  --bg: #f8f9fe;
+  --color: #121c42;
+  --shadow: #00000048;
+  --border: #d5e3ec;
+  --card-footer: #f7fafd;
+  --red: #f25353;
+  --red-shadow: #c44444;
+  --font-family: Calibri, Verdana, Roboto, Arial, sans-serif;
+  --font-size: 17px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--color);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li,ol,img,video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+}
+
+section.content {
+  width: 100%;
+  height: 100vh;
+  background: url('./img_nature_wide.jpg') no-repeat center / cover;
+}
+
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.modals > .modals-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modals > .modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px var(--shadow);
+}
+
+.modals > .modal > .modal-head {
+  padding: 1em 1.5em;
+  border-radius: 10px 10px 0 0;
+  background: var(--card-footer);
+  margin-bottom: 1.5em;
+  box-shadow: 1px 1px 10px var(--shadow);
+}
+
+.modals > .modal > .modal-content {
+  width: 90%;
+  margin: auto;
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+
+.modals > .modal > .modal-footer {
+  padding: 1em 1.5em;
+  border-radius: 0 0 10px 10px;
+  background: var(--card-footer);
+  display: flex;
+  justify-content: end;
+  box-shadow: 1px 1px 10px var(--shadow);
+}
+
+button,
+.btn {
+  background: var(--primary);
+  padding: 0.5em 1em;
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--primary-shadow);
+}
+
+.btn.btn-danger {
+  background: var(--red);
+}
+
+.btn.btn-danger:hover {
+  background: var(--red-shadow);
+}
