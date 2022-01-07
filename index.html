@@ -11,11 +11,11 @@
 <body>
   <main>
     <section class="content">
-      <button>Open Modal</button>
+      <button id="modalBtn" data-modal="example">Open Modal</button>
     </section>
     <div class="modals">
       <div class="modals-bg"></div>
-      <div class="modal">
+      <div class="modal" id="example">
         <div class="modal-head">
           <h2>This a modal</h2>
         </div>
@@ -23,7 +23,7 @@
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus assumenda odit placeat cumque iure deserunt. Earum, nostrum ut ex, ipsam et in mollitia sit distinctio iusto nam, laboriosam molestias at?
         </div>
         <div class="modal-footer">
-          <button class="btn btn-danger">Close</button>
+          <button class="btn btn-danger"id="modalBtnClose" data-modal="example">Close</button>
         </div>
       </div>
     </div>

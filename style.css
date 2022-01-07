@@ -53,6 +53,11 @@ section.content {
   width: 100%;
   height: 100vh;
   overflow: auto;
+  visibility: hidden;
+}
+
+.modals.active {
+  visibility: visible;
 }
 
 .modals > .modals-bg {
@@ -63,17 +68,24 @@ section.content {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .modals > .modal {
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-50%);
-  width: 500px;
+  max-width: 500px;
+  width: 95%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 1px 1px 10px var(--shadow);
+  transform: translate(-50%, 10%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .modals > .modal > .modal-head {
@@ -125,3 +137,16 @@ button:hover,
 .btn.btn-danger:hover {
   background: var(--red-shadow);
 }
+
+.modal.active {
+  transform: translate(-50%, 30%);
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.modals > .modals-bg.active {
+  opacity: 1;
+  visibility: visible;
+}
+
